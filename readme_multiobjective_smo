@@ -1,0 +1,57 @@
+This is the Readme file for Multiobjective Spider Monkey Optimisation code.
+
+
+About the Algorithm
+--------------------------------------------------------------------------
+
+
+Please refer to the following paper and books for details about the algorithm:
+
+Authors: Dr. Kalyanmoy Deb, Sameer Agrawal, Amrit Pratap, T Meyarivan
+Paper Title: A Fast and Elitist multi-objective Genetic Algorithm: NSGA-II
+Journal: IEEE Transactions on Evolutionary Computation (IEEE-TEC)
+Year: 2002
+Volume: 6
+Number: 2
+Pages: 182-197
+---------------------------------------------------------------------------
+
+How to compile and run the program
+---------------------------------------------------------------------------
+
+type cc m.c -lm
+
+Note: put all the files in one folder.
+---------------------------------------------------------------------------
+
+
+
+About the files
+---------------------------------------------------------------------------
+combined.h : This has all the variables used in the code and also the test function which has to be implemented .
+             The test problems that are implemented are taken from " NSABC : Non-dominated sorting based multi-objective artificial bee colony
+             algorithm and its application in data clustering" authors are: Avadh Kishor, Pramod Kumar Singh,Jay Prakash.
+
+m.c:         This contains the main function and the main implementation of the code.
+
+
+main.h :     This contains the constraints that has to be applied on swarm size and everything.
+
+---------------------------------------------------------------------------
+
+This algo instead of using an external archive uses array to store non-dominated population.
+
+Population array stores 1 in D column for those pop who are nondominated in Global leader Learning phase.
+Population array stores 1 in D+1 column for those pop who are nondominated in Local leader Learning  phase.
+Population array stores crowding dist in D+3 column after sorting pop on basis of crowding distance.
+
+
+
+
+
+
+
+
+
+
+
